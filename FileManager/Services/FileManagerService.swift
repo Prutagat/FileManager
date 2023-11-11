@@ -10,6 +10,7 @@ import Foundation
 struct Content {
     let isDirectory: Bool
     let name: String
+    let size: String
 }
 
 protocol FileManagerServiceProtocol {
@@ -21,8 +22,11 @@ protocol FileManagerServiceProtocol {
 }
 
 final class FileManagerService: FileManagerServiceProtocol {
+    static let shared = FileManagerService()
     let fileManager: FileManager = FileManager.default
       
+    private init() {}
+    
     func contentsOfDirectory(directory: URL) -> [Content] {
         var documents: [Content] = []
         do {
@@ -31,7 +35,11 @@ final class FileManagerService: FileManagerServiceProtocol {
                 var isDirectory: ObjCBool = false
                 let documentUrl = directory.appendingPathComponent(document)
                 fileManager.fileExists(atPath: documentUrl.path, isDirectory: &isDirectory)
-                documents.append(Content(isDirectory: isDirectory.boolValue, name: document))
+                do {
+                    let attributes = try fileManager.attributesOfItem(atPath: documentUrl.path)
+                    let fileSize = attributes[FileAttributeKey.size] as! UInt64
+                    documents.append(Content(isDirectory: isDirectory.boolValue, name: document, size: String(fileSize)))
+                } catch { return }
             }
         } catch let error {
             print(error)
@@ -65,5 +73,11 @@ final class FileManagerService: FileManagerServiceProtocol {
         } catch let error {
             print(error)
         }
+    }
+}
+
+extension FileManagerService: NSCopying {
+    func copy(with zone: NSZone? = nil) -> Any {
+        return self
     }
 }
