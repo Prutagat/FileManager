@@ -10,6 +10,21 @@
 		81204D3A2AF19081008EC413 /* FileManagerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81204D392AF19081008EC413 /* FileManagerService.swift */; };
 		81204D3E2AF1A53B008EC413 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81204D3D2AF1A53B008EC413 /* AppCoordinator.swift */; };
 		81204D412AF4370C008EC413 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81204D402AF4370C008EC413 /* ImagePicker.swift */; };
+		81204D432AF9090A008EC413 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81204D422AF9090A008EC413 /* AuthorizationViewController.swift */; };
+		81204D462AF931EB008EC413 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81204D452AF931EB008EC413 /* CustomButton.swift */; };
+		81204D482AF9320E008EC413 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81204D472AF9320E008EC413 /* CustomTextField.swift */; };
+		81204D4B2AF93758008EC413 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 81204D4A2AF93758008EC413 /* SnapKit */; };
+		81204D4D2AF93758008EC413 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 81204D4C2AF93758008EC413 /* SnapKit-Dynamic */; };
+		81204D502AF938F6008EC413 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 81204D4F2AF938F6008EC413 /* KeychainSwift */; };
+		81204D522AF94FCE008EC413 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81204D512AF94FCE008EC413 /* KeychainService.swift */; };
+		81204D542AFAD120008EC413 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81204D532AFAD120008EC413 /* TabBarCoordinator.swift */; };
+		81204D562AFAD3A4008EC413 /* Coordinatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81204D552AFAD3A4008EC413 /* Coordinatable.swift */; };
+		81204D582AFAD6EB008EC413 /* FileManagerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81204D572AFAD6EB008EC413 /* FileManagerCoordinator.swift */; };
+		81204D5A2AFADB98008EC413 /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81204D592AFADB98008EC413 /* SettingsCoordinator.swift */; };
+		81204D5C2AFADF8E008EC413 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81204D5B2AFADF8E008EC413 /* SettingsViewController.swift */; };
+		81204D5F2AFE1F53008EC413 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81204D5E2AFE1F53008EC413 /* SettingsModel.swift */; };
+		81204D622AFE2272008EC413 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81204D612AFE2272008EC413 /* SettingsTableViewCell.swift */; };
+		81204D642AFE3FDC008EC413 /* SettingsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81204D632AFE3FDC008EC413 /* SettingsService.swift */; };
 		8157990F2AF039670070FD5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8157990E2AF039670070FD5B /* AppDelegate.swift */; };
 		815799112AF039670070FD5B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815799102AF039670070FD5B /* SceneDelegate.swift */; };
 		815799182AF039680070FD5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 815799172AF039680070FD5B /* Assets.xcassets */; };
@@ -21,6 +36,18 @@
 		81204D392AF19081008EC413 /* FileManagerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerService.swift; sourceTree = "<group>"; };
 		81204D3D2AF1A53B008EC413 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		81204D402AF4370C008EC413 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		81204D422AF9090A008EC413 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
+		81204D452AF931EB008EC413 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		81204D472AF9320E008EC413 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		81204D512AF94FCE008EC413 /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
+		81204D532AFAD120008EC413 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
+		81204D552AFAD3A4008EC413 /* Coordinatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinatable.swift; sourceTree = "<group>"; };
+		81204D572AFAD6EB008EC413 /* FileManagerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerCoordinator.swift; sourceTree = "<group>"; };
+		81204D592AFADB98008EC413 /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
+		81204D5B2AFADF8E008EC413 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		81204D5E2AFE1F53008EC413 /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
+		81204D612AFE2272008EC413 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		81204D632AFE3FDC008EC413 /* SettingsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsService.swift; sourceTree = "<group>"; };
 		8157990B2AF039670070FD5B /* FileManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FileManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8157990E2AF039670070FD5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		815799102AF039670070FD5B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +62,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81204D502AF938F6008EC413 /* KeychainSwift in Frameworks */,
+				81204D4B2AF93758008EC413 /* SnapKit in Frameworks */,
+				81204D4D2AF93758008EC413 /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +76,8 @@
 			children = (
 				81204D392AF19081008EC413 /* FileManagerService.swift */,
 				81204D402AF4370C008EC413 /* ImagePicker.swift */,
+				81204D512AF94FCE008EC413 /* KeychainService.swift */,
+				81204D632AFE3FDC008EC413 /* SettingsService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -53,9 +85,38 @@
 		81204D3C2AF1A52B008EC413 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
+				81204D552AFAD3A4008EC413 /* Coordinatable.swift */,
 				81204D3D2AF1A53B008EC413 /* AppCoordinator.swift */,
+				81204D532AFAD120008EC413 /* TabBarCoordinator.swift */,
+				81204D572AFAD6EB008EC413 /* FileManagerCoordinator.swift */,
+				81204D592AFADB98008EC413 /* SettingsCoordinator.swift */,
 			);
 			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		81204D442AF9319A008EC413 /* CastomUI */ = {
+			isa = PBXGroup;
+			children = (
+				81204D472AF9320E008EC413 /* CustomTextField.swift */,
+				81204D452AF931EB008EC413 /* CustomButton.swift */,
+			);
+			path = CastomUI;
+			sourceTree = "<group>";
+		};
+		81204D5D2AFE1F3F008EC413 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				81204D5E2AFE1F53008EC413 /* SettingsModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		81204D602AFE2251008EC413 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				81204D612AFE2272008EC413 /* SettingsTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		815799022AF039670070FD5B = {
@@ -78,9 +139,12 @@
 			isa = PBXGroup;
 			children = (
 				815799222AF03ABD0070FD5B /* Aplication */,
-				81204D3C2AF1A52B008EC413 /* Coordinators */,
 				81204D382AF19074008EC413 /* Services */,
+				81204D442AF9319A008EC413 /* CastomUI */,
+				81204D3C2AF1A52B008EC413 /* Coordinators */,
 				815799252AF03D5E0070FD5B /* Controllers */,
+				81204D5D2AFE1F3F008EC413 /* Models */,
+				81204D602AFE2251008EC413 /* Cells */,
 				815799172AF039680070FD5B /* Assets.xcassets */,
 				815799192AF039680070FD5B /* LaunchScreen.storyboard */,
 				8157991C2AF039680070FD5B /* Info.plist */,
@@ -100,17 +164,11 @@
 		815799252AF03D5E0070FD5B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				815799262AF045CD0070FD5B /* Cell */,
+				81204D422AF9090A008EC413 /* AuthorizationViewController.swift */,
 				815799232AF03B7F0070FD5B /* FileManagerViewController.swift */,
+				81204D5B2AFADF8E008EC413 /* SettingsViewController.swift */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		815799262AF045CD0070FD5B /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,6 +187,11 @@
 			dependencies = (
 			);
 			name = FileManager;
+			packageProductDependencies = (
+				81204D4A2AF93758008EC413 /* SnapKit */,
+				81204D4C2AF93758008EC413 /* SnapKit-Dynamic */,
+				81204D4F2AF938F6008EC413 /* KeychainSwift */,
+			);
 			productName = FileManager;
 			productReference = 8157990B2AF039670070FD5B /* FileManager.app */;
 			productType = "com.apple.product-type.application";
@@ -157,6 +220,10 @@
 				Base,
 			);
 			mainGroup = 815799022AF039670070FD5B;
+			packageReferences = (
+				81204D492AF93758008EC413 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				81204D4E2AF938F6008EC413 /* XCRemoteSwiftPackageReference "keychain-swift" */,
+			);
 			productRefGroup = 8157990C2AF039670070FD5B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -183,12 +250,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81204D642AFE3FDC008EC413 /* SettingsService.swift in Sources */,
+				81204D5F2AFE1F53008EC413 /* SettingsModel.swift in Sources */,
+				81204D432AF9090A008EC413 /* AuthorizationViewController.swift in Sources */,
 				81204D3A2AF19081008EC413 /* FileManagerService.swift in Sources */,
 				815799242AF03B7F0070FD5B /* FileManagerViewController.swift in Sources */,
+				81204D522AF94FCE008EC413 /* KeychainService.swift in Sources */,
+				81204D5A2AFADB98008EC413 /* SettingsCoordinator.swift in Sources */,
 				81204D412AF4370C008EC413 /* ImagePicker.swift in Sources */,
+				81204D562AFAD3A4008EC413 /* Coordinatable.swift in Sources */,
+				81204D462AF931EB008EC413 /* CustomButton.swift in Sources */,
+				81204D5C2AFADF8E008EC413 /* SettingsViewController.swift in Sources */,
+				81204D542AFAD120008EC413 /* TabBarCoordinator.swift in Sources */,
+				81204D622AFE2272008EC413 /* SettingsTableViewCell.swift in Sources */,
 				81204D3E2AF1A53B008EC413 /* AppCoordinator.swift in Sources */,
 				8157990F2AF039670070FD5B /* AppDelegate.swift in Sources */,
 				815799112AF039670070FD5B /* SceneDelegate.swift in Sources */,
+				81204D482AF9320E008EC413 /* CustomTextField.swift in Sources */,
+				81204D582AFAD6EB008EC413 /* FileManagerCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +480,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		81204D492AF93758008EC413 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.0;
+			};
+		};
+		81204D4E2AF938F6008EC413 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/keychain-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 20.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		81204D4A2AF93758008EC413 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 81204D492AF93758008EC413 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		81204D4C2AF93758008EC413 /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 81204D492AF93758008EC413 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
+		};
+		81204D4F2AF938F6008EC413 /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 81204D4E2AF938F6008EC413 /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 815799032AF039670070FD5B /* Project object */;
 }

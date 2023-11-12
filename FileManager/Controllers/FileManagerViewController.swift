@@ -6,17 +6,18 @@
 //
 
 import UIKit
+import SnapKit
 
 class FileManagerViewController: UIViewController {
     
     // MARK: - parametrs
     
-    let coordinator: AppCoordinator
+    let coordinator: FileManagerCoordinator
     let fileManagerService: FileManagerServiceProtocol
+    let settingsService = SettingsService.shared
     let directory: URL
     var documents: [Content] = []
     var imagePicker = ImagePicker()
-    private var nameFolderTextField = UITextField()
     private lazy var documentsTableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -27,7 +28,7 @@ class FileManagerViewController: UIViewController {
     
     // MARK: - initialization
     
-    init(coordinator: AppCoordinator, fileManagerService: FileManagerService, title: String, directory: URL) {
+    init(coordinator: FileManagerCoordinator, fileManagerService: FileManagerService, title: String = "", directory: URL) {
         self.coordinator = coordinator
         self.fileManagerService = fileManagerService
         self.directory = directory
@@ -48,6 +49,11 @@ class FileManagerViewController: UIViewController {
         getDocuments()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        getDocuments()
+    }
+    
     // MARK: - targets
     
     @objc func addFilePressed(_ sender: UIBarButtonItem ) {
@@ -59,7 +65,7 @@ class FileManagerViewController: UIViewController {
     }
     
     @objc func addFolderPressed(_ sender: UIBarButtonItem ) {
-        coordinator.presentAlert(viewController: self) { [weak self] nameFolder in
+        coordinator.openNewFolder(viewController: self) { [weak self] nameFolder in
             guard let self else { return }
             self.fileManagerService.createDirectory(directory: self.directory, directoryName: nameFolder)
             self.getDocuments()
@@ -84,17 +90,14 @@ class FileManagerViewController: UIViewController {
     }
     
     private func setupConstraints() {
-        let safeAreaGuide = view.safeAreaLayoutGuide
-        NSLayoutConstraint.activate([
-            documentsTableView.topAnchor.constraint(equalTo: safeAreaGuide.topAnchor),
-            documentsTableView.leadingAnchor.constraint(equalTo: safeAreaGuide.leadingAnchor),
-            documentsTableView.trailingAnchor.constraint(equalTo: safeAreaGuide.trailingAnchor),
-            documentsTableView.bottomAnchor.constraint(equalTo: safeAreaGuide.bottomAnchor)
-        ])
+        documentsTableView.snp.makeConstraints { make in make.top.leading.trailing.bottom.equalToSuperview() }
     }
     
     private func getDocuments() {
         documents = fileManagerService.contentsOfDirectory(directory: directory)
+        if settingsService.getSetting(setting: .sorting) {
+            documents.sort { $0.name > $1.name }
+        }
         documentsTableView.reloadData()
     }
 }
@@ -107,7 +110,11 @@ extension FileManagerViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
         var content: UIListContentConfiguration = cell.defaultContentConfiguration()
-        content.text = documents[indexPath.row].name
+        let document = documents[indexPath.row]
+        content.text = document.name
+        if !document.isDirectory && settingsService.getSetting(setting: .showPhotoSize) {
+            content.secondaryText = document.size + " байт"
+        }
         cell.contentConfiguration = content
         if documents[indexPath.row].isDirectory { cell.accessoryType = .disclosureIndicator }
         return cell

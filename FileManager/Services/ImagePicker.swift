@@ -11,7 +11,7 @@ final class ImagePicker: NSObject, UIImagePickerControllerDelegate, UINavigation
     var imagePickerController: UIImagePickerController?
     var completion: ((URL) -> ())?
     
-    func show(coordinator: AppCoordinator, completion: ((URL) -> ())?) {
+    func show(coordinator: Coordinatable, completion: ((URL) -> ())?) {
         self.completion = completion
         imagePickerController = UIImagePickerController()
         imagePickerController!.delegate = self
